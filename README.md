@@ -1,13 +1,13 @@
 # 🌱 Crop Guard AI
 
-**Crop Guard** is an AI-powered agricultural diagnostic tool built for smallholder farmers. It analyzes crop leaf images, identifies diseases using a Vision Transformer (ViT), and provides localized, organic, and accessible treatment recommendations via a lightweight Large Language Model (Qwen2.5 7B GGUF).
+**Crop Guard** is an AI-powered agricultural diagnostic tool built for smallholder farmers. It analyzes crop leaf images, identifies diseases using a Vision Transformer (ViT), and provides localized, organic, and accessible treatment recommendations via a lightweight Large Language Model (Qwen2.5 3B GGUF).
 
 ---
 
 ## 🚀 Features
 
 - **Vision Diagnosis:** Uses a fine-tuned `google/vit-base-patch16-224` to accurately classify 38 plant health and disease conditions (based on PlantVillage).
-- **Organic Agronomist AI:** Synthesizes the raw machine label into a localized context, passing it to a highly quantized LLM (`Qwen2.5-7B-Instruct-GGUF`) that runs entirely within the Gradio container.
+- **Organic Agronomist AI:** Synthesizes the raw machine label into a localized context, passing it to a highly quantized LLM (`Qwen2.5-3B-Instruct-GGUF`) that runs entirely within the Gradio container.
 - **Responsive UI:** Built with Gradio Blocks and custom CSS to deliver a premium, mobile-friendly interface for field use.
 - **English-Only Diagnosis:** Strict constraints ensure the AI provides treatments focusing on natural remedies like neem oil and wood ash.
 
@@ -27,7 +27,7 @@ You can run this project locally to test the interface or make modifications.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/crop-guard.git
+   git clone https://github.com/Usefulmech/crop-guard.git
    cd crop-guard
    ```
 
