@@ -1,4 +1,5 @@
 import gradio as gr
+import spaces
 import torch
 import os
 from PIL import Image
@@ -46,6 +47,7 @@ def parse_label(raw_label):
     clean = str(raw_label).replace("___", ": ").replace("__", " ").replace("_", " ")
     return clean.title()
 
+@spaces.GPU
 def process_field_analysis(input_img):
     if input_img is None:
         return "<div style='color:red; padding: 20px; text-align:center;'>⚠️ Error: Please input or capture an image before executing analysis.</div>"
