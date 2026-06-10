@@ -5,5 +5,5 @@ transformers
 torch
 torchvision
 timm
-huggingface_hub
+huggingface_hub<0.27.0
 pillow
