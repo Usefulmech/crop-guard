@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Crop Guard | Diagnosis Results</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Playfair Display & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#415c00",
+                    "on-secondary-fixed": "#2c1600",
+                    "secondary": "#7d562d",
+                    "on-background": "#1d1c16",
+                    "primary-fixed": "#b7f1af",
+                    "on-tertiary-fixed": "#131f00",
+                    "on-primary-fixed-variant": "#1e5120",
+                    "secondary-container": "#ffca98",
+                    "tertiary": "#2e4300",
+                    "secondary-fixed-dim": "#f0bd8b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dedad0",
+                    "secondary-fixed": "#ffdcbd",
+                    "surface-container": "#f2ede3",
+                    "inverse-primary": "#9cd595",
+                    "on-primary-fixed": "#002204",
+                    "on-secondary-container": "#7a532a",
+                    "tertiary-fixed": "#c8f17a",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "primary": "#114616",
+                    "on-secondary-fixed-variant": "#623f18",
+                    "inverse-on-surface": "#f5f0e6",
+                    "surface": "#fef9ef",
+                    "surface-bright": "#fef9ef",
+                    "background": "#fef9ef",
+                    "on-tertiary-container": "#aed563",
+                    "primary-container": "#2b5e2b",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f8f3e9",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#364e00",
+                    "surface-container-high": "#ede8de",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#366935",
+                    "on-surface": "#1d1c16",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c1c9bc",
+                    "surface-variant": "#e7e2d8",
+                    "outline": "#72796e",
+                    "primary-fixed-dim": "#9cd595",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#add461",
+                    "surface-container-highest": "#e7e2d8",
+                    "on-primary-container": "#9dd696",
+                    "inverse-surface": "#32302a",
+                    "on-surface-variant": "#41493f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding-mobile": "20px",
+                    "stack-md": "16px",
+                    "container-padding-desktop": "40px",
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .dashed-border {
+            border: 2px dashed #72796e;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='%2372796eFF' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+            border: none;
+        }
+        .growing-progress-bar {
+            height: 12px;
+            background-color: #e7e2d8;
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+        .growing-progress-fill {
+            height: 100%;
+            background-color: #114616;
+            border-radius: 999px;
+            transition: width 1s ease-out;
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 10px rgba(17, 70, 22, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-surface-variant">
+<div class="flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop py-4 max-w-[1200px] mx-auto">
+<div class="flex items-center gap-2 font-headline-md text-headline-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+                Crop Guard
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-primary font-bold" href="#">Scan</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors px-3 py-2 rounded-full" href="#">Plants</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors px-3 py-2 rounded-full" href="#">Library</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors px-3 py-2 rounded-full" href="#">Profile</a>
+</div>
+<div class="font-label-md text-label-md text-primary">
+                EN / YR
+            </div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 md:pb-12 px-container-padding-mobile md:px-container-padding-desktop max-w-[1200px] mx-auto w-full">
+<!-- Animated Intro/Atmosphere -->
+<div class="mb-stack-lg">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Diagnosis Result</h1>
+<p class="text-on-surface-variant max-w-2xl">We've analyzed your photo. Here's our assessment and recommended next steps for your plant's health.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg">
+<!-- Left Column: Image & Confidence -->
+<div class="md:col-span-5 flex flex-col gap-stack-md">
+<div class="relative w-full aspect-square bg-surface-container-high rounded-lg overflow-hidden border border-outline-variant">
+<img alt="Uploaded plant leaf scan" class="w-full h-full object-cover" data-alt="A macro photograph of a tomato leaf showing distinct dark brown necrotic spots surrounded by a pale yellow halo, typical of Late Blight. The lighting is soft and natural, emphasizing the organic textures of the leaf's surface. The background is a blurred garden setting with earthy greens and warm cream tones, maintaining a professional yet artisanal agricultural vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzWu9pQVdkL1iE-Ogyq3PztBKtzeYqw6Zbw4UTmYuwoHunyj9fn6c9BvCVl7TFahdN05KOu_n8nuVDIpHe4hYZaRltrB4saARVjn41GjMi4BPgzrhK1Yq5YBAhqvs-I68sRHAQtCBY75DgBCwMFycpl32UIdBfGRvvJAX8S3iFXSEtDXdjxVGUsHoNIjXVEyBQOYMqdwvwcEon6WMc9gPftIODxmwdYhDok3h2CUhXGrC8atZiLe1Jgk7sWabt0pM3YuBFnOW54Ycy"/>
+<!-- Confidence Overlay -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-md p-4 rounded-lg border border-outline-variant shadow-sm">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-md text-label-md text-on-surface">Confidence Level</span>
+<span class="font-label-md text-label-md text-primary font-bold">94%</span>
+</div>
+<div class="growing-progress-bar">
+<div class="growing-progress-fill" style="width: 94%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Details & Treatment -->
+<div class="md:col-span-7 flex flex-col gap-stack-md">
+<!-- Diagnosis Header -->
+<div class="bg-white border border-outline-variant rounded-lg p-6 flex flex-col gap-stack-sm custom-shadow">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm">search</span>
+                            Late Blight
+                        </span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">Infection detected</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-2">Phytophthora infestans</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        Late blight is a serious disease that can affect both potatoes and tomatoes. It thrives in humid, cool conditions and can spread rapidly if not managed immediately.
+                    </p>
+</div>
+<!-- Progress/Severity -->
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Severity Status</h3>
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container text-label-sm font-label-sm">Active Alert</span>
+</div>
+<div class="growing-progress-bar">
+<div class="growing-progress-fill" style="width: 65%; background-color: #ba1a1a;"></div>
+</div>
+<p class="text-label-sm text-on-surface-variant mt-2 text-right">Moderate - Action required within 48 hours</p>
+</div>
+<!-- Treatment Card -->
+<div class="bg-white border border-primary/20 rounded-lg p-6 flex items-start gap-4 custom-shadow relative overflow-hidden">
+<!-- Accent Pattern -->
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 opacity-5">
+<span class="material-symbols-outlined text-[120px] text-primary" style="font-variation-settings: 'FILL' 1;">sprinkler</span>
+</div>
+<div class="bg-primary-container p-3 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary-container">vaccines</span>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-primary font-bold">Treatment Plan</h4>
+<div class="space-y-3">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-body-lg">check_circle</span>
+<p class="text-on-surface">Spray neem oil every 3 days until symptoms recede.</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-body-lg">check_circle</span>
+<p class="text-on-surface">Remove infected leaves and dispose away from compost.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex-1 bg-primary text-on-primary font-label-md text-label-md py-4 px-6 rounded-full flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all duration-200 shadow-md">
+<span class="material-symbols-outlined">content_copy</span>
+                        Copy advice
+                    </button>
+<button class="flex-1 border-2 border-primary text-primary font-label-md text-label-md py-4 px-6 rounded-full flex items-center justify-center gap-2 hover:bg-surface-container-high active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined">photo_camera</span>
+                        New photo
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-lg bg-surface shadow-[0_-4px_10px_rgba(17,70,22,0.05)]">
+<div class="flex justify-around items-center h-20 px-4 pb-safe w-full">
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+<span class="font-label-sm text-label-sm">Scan</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined">potted_plant</span>
+<span class="font-label-sm text-label-sm">Plants</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm">Library</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</div>
+</nav>
+<!-- Floating Atmosphere Elements -->
+<div class="fixed bottom-12 right-12 hidden lg:block opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[200px] text-tertiary">potted_plant</span>
+</div>
+<script>
+        // Micro-interaction for the "Copy Advice" button
+        document.querySelector('button:has(.material-symbols-outlined:contains("content_copy"))')?.addEventListener('click', function() {
+            const btn = this;
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined">check</span> Copied!';
+            setTimeout(() => {
+                btn.innerHTML = originalHtml;
+            }, 2000);
+        });
+
+        // Simple observer for progress bar animation on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const fills = document.querySelectorAll('.growing-progress-fill');
+            fills.forEach(fill => {
+                const targetWidth = fill.style.width;
+                fill.style.width = '0%';
+                setTimeout(() => {
+                    fill.style.width = targetWidth;
+                }, 300);
+            });
+        });
+    </script>
+</body></html>

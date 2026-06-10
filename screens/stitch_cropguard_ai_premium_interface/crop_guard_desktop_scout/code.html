@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Crop Guard - Desktop Mockup</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#415c00",
+                      "on-secondary-fixed": "#2c1600",
+                      "secondary": "#7d562d",
+                      "on-background": "#1d1c16",
+                      "primary-fixed": "#b7f1af",
+                      "on-tertiary-fixed": "#131f00",
+                      "on-primary-fixed-variant": "#1e5120",
+                      "secondary-container": "#ffca98",
+                      "tertiary": "#2e4300",
+                      "secondary-fixed-dim": "#f0bd8b",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-dim": "#dedad0",
+                      "secondary-fixed": "#ffdcbd",
+                      "surface-container": "#f2ede3",
+                      "inverse-primary": "#9cd595",
+                      "on-primary-fixed": "#002204",
+                      "on-secondary-container": "#7a532a",
+                      "tertiary-fixed": "#c8f17a",
+                      "on-error-container": "#93000a",
+                      "on-primary": "#ffffff",
+                      "primary": "#114616",
+                      "on-secondary-fixed-variant": "#623f18",
+                      "inverse-on-surface": "#f5f0e6",
+                      "surface": "#fef9ef",
+                      "surface-bright": "#fef9ef",
+                      "background": "#fef9ef",
+                      "on-tertiary-container": "#aed563",
+                      "primary-container": "#2b5e2b",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f8f3e9",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#364e00",
+                      "surface-container-high": "#ede8de",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#366935",
+                      "on-surface": "#1d1c16",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#c1c9bc",
+                      "surface-variant": "#e7e2d8",
+                      "outline": "#72796e",
+                      "primary-fixed-dim": "#9cd595",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed-dim": "#add461",
+                      "surface-container-highest": "#e7e2d8",
+                      "on-primary-container": "#9dd696",
+                      "inverse-surface": "#32302a",
+                      "on-surface-variant": "#41493f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-padding-mobile": "20px",
+                      "stack-md": "16px",
+                      "container-padding-desktop": "40px",
+                      "unit": "8px",
+                      "gutter": "16px",
+                      "stack-lg": "32px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Playfair Display"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Playfair Display"],
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-md": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dashed-border {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='32' ry='32' stroke='%2372796e' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+            border-radius: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md min-h-screen overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-surface-variant px-container-padding-desktop py-4">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center">
+<div class="flex items-center gap-2 font-headline-md text-headline-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+                Crop Guard
+            </div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+<a class="text-primary font-bold" href="#">Scan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Plants</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Library</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Profile</a>
+</nav>
+<div class="h-10 px-4 flex items-center bg-surface-container-high rounded-full font-label-md text-on-surface-variant border border-outline-variant hover:bg-surface-container-highest cursor-pointer transition-all active:scale-95">
+                    EN / YR
+                </div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-12 px-container-padding-desktop min-h-screen flex flex-col items-center justify-center relative max-w-[1280px] mx-auto">
+<!-- Decorative Background Element -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-10 pointer-events-none">
+
+</div>
+<div class="w-full max-w-4xl relative z-10 flex flex-col gap-stack-lg">
+<!-- Header Section -->
+<div class="text-center space-y-2">
+<h1 class="font-headline-lg text-headline-lg text-primary">Diagnose Your Plant</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Get instant expert advice for your crops and garden plants.</p>
+</div>
+<!-- Upload Card -->
+<div class="bg-surface-container-lowest rounded-lg p-unit shadow-sm border border-outline-variant/30">
+<div class="dashed-border min-h-[360px] flex flex-col items-center justify-center gap-stack-md transition-all hover:bg-surface-container-low cursor-pointer group">
+<div class="w-20 h-20 rounded-full bg-primary-container/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-[48px]">photo_camera</span>
+</div>
+<div class="text-center">
+<span class="font-headline-md text-headline-md text-on-surface">Take photo or upload</span>
+<p class="text-on-surface-variant mt-2 font-body-md text-body-md">Supports JPG, PNG up to 10MB</p>
+</div>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex justify-between items-center w-full">
+<!-- Left Buttons -->
+<div class="flex gap-stack-md">
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-highest text-primary font-label-md text-label-md rounded-full border border-outline-variant hover:bg-outline-variant/20 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+                        Take photo
+                    </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-highest text-primary font-label-md text-label-md rounded-full border border-outline-variant hover:bg-outline-variant/20 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+                        Upload
+                    </button>
+</div>
+<!-- Primary CTA -->
+<button class="flex items-center gap-3 px-8 py-4 bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full shadow-lg shadow-primary/10 hover:brightness-110 transition-all hover:-translate-y-0.5 active:translate-y-0 active:scale-95">
+                    Analyze
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Contextual Info Cards (Bento Style) -->
+<div class="grid grid-cols-3 gap-gutter mt-stack-lg">
+<div class="p-6 bg-surface-container rounded-lg border border-outline-variant flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<h3 class="font-label-md text-label-md text-on-surface">98% Accuracy</h3>
+<p class="text-sm text-on-surface-variant">Powered by advanced agricultural computer vision.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-lg border border-outline-variant flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary">local_library</span>
+<h3 class="font-label-md text-label-md text-on-surface">Local Remedies</h3>
+<p class="text-sm text-on-surface-variant">Treatment plans curated for your specific soil and climate.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-lg border border-outline-variant flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary">forum</span>
+<h3 class="font-label-md text-label-md text-on-surface">Expert Support</h3>
+<p class="text-sm text-on-surface-variant">Connect with local agronomists if a disease is detected.</p>
+</div>
+</div>
+</div>
+<!-- Decorative Floral Element (Abstract) -->
+<div class="fixed bottom-0 right-0 w-[400px] h-[300px] pointer-events-none opacity-40">
+<img class="w-full h-full object-contain object-bottom-right" data-alt="A soft-focus, minimalist digital illustration of organic botanical leaves and branches with a hand-drawn feel. The colors are muted earthy greens and warm terracotta, fitting perfectly into a high-end cream and white design system. The lighting is diffused and natural, evoking a peaceful morning in a lush greenhouse." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJdFcWUtCy7Iav3kI7720McSBt1ZWLmABg9B9crmORK8mwXwUHWfcyjT-oBEjuCFSIvDoR8FGShs_kXQCdKTsohAUUqPxZdC65BhiDlYEv8YtT0Ogvbt87VQ8RZFR7spitDMx0mWq70Exlzk76z04ipHn5emF3oubotwiN9a5Q6eAacvFCpmH7MrT9nsrkmI8U3B9qUa48cENd5WsU3Yh-d0soDKZQTMqrDM3T4d3-Chine9OD6lz7kTUmCMcFcA7glONjaRj7_-bd"/>
+</div>
+<div class="fixed top-20 left-0 w-[300px] h-[400px] pointer-events-none opacity-30 -scale-x-100">
+<img class="w-full h-full object-contain object-top-left" data-alt="Close up photography of vibrant, healthy green crop leaves with dew drops reflecting morning light. The style is soft and organic with a shallow depth of field, focusing on the intricate vein patterns of the leaf. The background is a warm cream color that blends into a professional agricultural tech UI layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASw4UlY9pUh-JJR62tnLCLhOE08wRjAjeGXH3eK9kXiod2LTj8fiHVZJsCVLXyurHB4bjqyqs7x-5e0oCLFjsnu-jfsV3j-fnqsh6prZYqQZd0_VIXv5vpelDXfT4z-zBwgC5dvrlWhU2FLh6Lhnbr2xWgLTwo5sb0StdAIob90MdikyuDj97SivABlPuHcwN2KfOOhLWET7QEemq6C42WTLOkQ8d3s2ww_k8ykT14JaQyEmDTfSvCccNy0lS7MLUrq4soeCjo7BLy"/>
+</div>
+</main>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                // Subtle feedback logic could go here
+            });
+        });
+
+        // Simple file drop simulation
+        const dropZone = document.querySelector('.dashed-border');
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('bg-primary-container/5');
+        });
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('bg-primary-container/5');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('bg-primary-container/5');
+            alert('File received! Click Analyze to proceed.');
+        });
+    </script>
+</body></html>
