@@ -167,7 +167,7 @@ with gr.Blocks(css=custom_css, theme=gr.themes.Base()) as demo:
     <div class="top-app-bar">
         <div class="logo" style="display: flex; align-items: center; gap: 12px;">
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 28px; color: #ffffff; background-color: #2b5e2b; padding: 10px; border-radius: 50%; box-shadow: 0 4px 8px rgba(43,94,43,0.3);">eco</span>
-            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Crop Guard</span>
+            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.5px; color: #114616; opacity: 1;">Crop Guard</span>
         </div>
     </div>
     
