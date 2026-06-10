@@ -14,15 +14,15 @@ print("[System] Allocating local models...")
 
 VISION_MODEL_ID = "Usefulmech/vit-plant-disease-advisor" 
 try:
-    image_processor = AutoImageProcessor.from_pretrained(VISION_MODEL_ID)
-    vision_model = AutoModelForImageClassification.from_pretrained(VISION_MODEL_ID, low_cpu_mem_usage=True)
+    image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
+    vision_model = AutoModelForImageClassification.from_pretrained(VISION_MODEL_ID)
     vision_model.eval()
     print(f"[System] Successfully loaded {VISION_MODEL_ID}")
 except Exception as e:
     print(f"[Warning] Failed to load {VISION_MODEL_ID}. Falling back to base model for testing. Error: {e}")
     VISION_MODEL_ID = "google/vit-base-patch16-224"
     image_processor = AutoImageProcessor.from_pretrained(VISION_MODEL_ID)
-    vision_model = AutoModelForImageClassification.from_pretrained(VISION_MODEL_ID, low_cpu_mem_usage=True)
+    vision_model = AutoModelForImageClassification.from_pretrained(VISION_MODEL_ID)
     vision_model.eval()
 
 # B. Local LLM GGUF Setup via llama.cpp

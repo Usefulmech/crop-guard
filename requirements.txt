@@ -6,3 +6,4 @@ torchvision
 timm
 huggingface_hub<0.27.0
 pillow
+accelerate>=0.26.0
