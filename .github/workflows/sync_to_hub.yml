@@ -15,4 +15,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://Usefulmech:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/build-small-hackathon/Crop-Guard-AI main
+        run: git push --force https://Usefulmech:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/build-small-hackathon/Crop-Guard-AI main
