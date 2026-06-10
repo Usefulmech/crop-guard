@@ -53,7 +53,7 @@ def process_field_analysis(input_img):
         return "<div style='color:red; padding: 20px; text-align:center;'>⚠️ Error: Please input or capture an image before executing analysis.</div>"
     
     try:
-        pil_img = Image.fromarray(input_img).convert("RGB")
+        pil_img = Image.open(input_img).convert("RGB")
         inputs = image_processor(images=pil_img, return_tensors="pt")
         
         with torch.no_grad():
@@ -165,9 +165,9 @@ with gr.Blocks(css=custom_css, theme=gr.themes.Base()) as demo:
     
     gr.HTML("""
     <div class="top-app-bar">
-        <div class="logo">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
-            Crop Guard
+        <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 28px; color: #ffffff; background-color: #2b5e2b; padding: 10px; border-radius: 50%; box-shadow: 0 4px 8px rgba(43,94,43,0.3);">eco</span>
+            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Crop Guard</span>
         </div>
     </div>
     
@@ -178,7 +178,7 @@ with gr.Blocks(css=custom_css, theme=gr.themes.Base()) as demo:
     """)
     
     with gr.Column(elem_id="image-upload-box"):
-        camera_input = gr.Image(label="Field Photo Input", sources=["upload", "webcam"], type="numpy")
+        camera_input = gr.Image(label="Field Photo Input", sources=["upload", "webcam"], type="filepath")
         
     with gr.Row():
         analyze_button = gr.Button("Analyze ➔", variant="primary", elem_classes=["action-btn-primary"])
