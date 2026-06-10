@@ -1,5 +1,5 @@
 llama-cpp-python==0.2.89
-gradio==4.36.1
+
 transformers
 torch
 torchvision

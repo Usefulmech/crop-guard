@@ -173,7 +173,7 @@ with gr.Blocks(css=custom_css, theme=gr.themes.Base()) as demo:
     
     <div class="hero-section">
         <h1>Diagnose Your Plant</h1>
-        <p>Get instant expert advice for your crops and garden plants.</p>
+        <p>Get instant analysis and treatment advice for your crops and garden plants.</p>
     </div>
     """)
     
@@ -210,8 +210,7 @@ with gr.Blocks(css=custom_css, theme=gr.themes.Base()) as demo:
     analyze_button.click(
         fn=process_field_analysis,
         inputs=[camera_input],
-        outputs=[output_display],
-        api_name="predict"
+        outputs=[output_display]
     )
 
 if __name__ == "__main__":
