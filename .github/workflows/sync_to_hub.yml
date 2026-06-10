@@ -15,4 +15,15 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://Usefulmech:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/build-small-hackathon/Crop-Guard-AI main
+        run: |
+          rm -rf .git
+          git init
+          git remote add origin https://Usefulmech:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/build-small-hackathon/Crop-Guard-AI
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git checkout -b main
+          git lfs install
+          git lfs track "*.png"
+          git add .
+          git commit -m "Auto-deploy from GitHub"
+          git push --force origin main
