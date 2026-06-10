@@ -119,7 +119,6 @@ body, .gradio-container { background-color: #fef9ef !important; font-family: 'In
 
 /* Hide default gradio stuff */
 footer { display: none !important; }
-.svelte-1ed2p3z { display: none !important; }
 
 /* Top App Bar */
 .top-app-bar { position: fixed; top: 0; left: 0; width: 100%; z-index: 50; background-color: #fef9ef; border-bottom: 1px solid #e7e2d8; padding: 16px 40px; display: flex; justify-content: center; align-items: center; box-sizing: border-box; }
@@ -211,7 +210,8 @@ with gr.Blocks(css=custom_css, theme=gr.themes.Base()) as demo:
     analyze_button.click(
         fn=process_field_analysis,
         inputs=[camera_input],
-        outputs=[output_display]
+        outputs=[output_display],
+        api_name="predict"
     )
 
 if __name__ == "__main__":
