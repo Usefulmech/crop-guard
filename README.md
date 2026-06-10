@@ -1,3 +1,14 @@
+---
+title: Crop Guard AI
+emoji: 🌱
+colorFrom: green
+colorTo: emerald
+sdk: gradio
+sdk_version: 4.36.1
+app_file: app.py
+pinned: false
+---
+
 # 🌱 Crop Guard AI
 
 **Crop Guard** is an AI-powered agricultural diagnostic tool built for smallholder farmers. It analyzes crop leaf images, identifies diseases using a Vision Transformer (ViT), and provides localized, organic, and accessible treatment recommendations via a lightweight Large Language Model (Qwen2.5 3B GGUF).
